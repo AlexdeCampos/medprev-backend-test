@@ -1,7 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Timestamp } from 'typeorm';
 
-export class AddressBodyDto {
+export class AddressResponseDto {
+
+    @ApiProperty()
+    id: number
 
     @ApiProperty()
     streetName: string;
@@ -23,4 +26,10 @@ export class AddressBodyDto {
 
     @ApiProperty()
     zipCode: string
+
+    @ApiProperty({ type: Date, format: 'date-time' })
+    createdAt: Timestamp
+
+    @ApiProperty({ type: Date, format: 'date-time' })
+    updatedAt: Timestamp
 }

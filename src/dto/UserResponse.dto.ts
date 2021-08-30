@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Timestamp } from 'typeorm';
 import { Gender, Type } from '../types';
-import { AddressBodyDto } from './AddressBody.dto';
+import { AddressResponseDto } from './AddressResponse.dto';
 
 export class UserResponseDto {
 
@@ -44,7 +44,7 @@ export class UserResponseDto {
     @ApiProperty({ type: Date, format: 'date-time' })
     updatedAt: Timestamp
 
-    @ApiProperty({ type: [AddressBodyDto] })
-    addresses: [AddressBodyDto]
+    @ApiProperty({ type: [AddressResponseDto] })
+    addresses: [AddressResponseDto]
 
 }
