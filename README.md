@@ -20,7 +20,7 @@ Developing with [Docker](https://www.docker.com) (and Docker-Compose)
 ## Requirements
 
 - Docker (and docker-compose)
-- NPM or Yarn
+- NPM
 
 ## How to run
 
@@ -36,7 +36,6 @@ Developing with [Docker](https://www.docker.com) (and Docker-Compose)
 ```bash
 # Install dependencies
 docker-compose run --rm api npm install
-# or: docker-compose run --rm api yarn
 ```
 
 ### Run the API
@@ -54,7 +53,6 @@ docker-compose up
 ```bash
 # API must be running
 npm run docker:migration:run
-# or: yarn docker:migration:run
 ```
 
 - Generate new migration
@@ -62,7 +60,6 @@ npm run docker:migration:run
 ```bash
 # API must be running
 npm run docker:migration:generate MigrationName
-# or: yarn docker:migration:generate MigrationName
 ```
 
 ## Run commands
@@ -77,14 +74,12 @@ To run all tests:
 
 ```bash
 npm run docker:test
-# or: yarn docker:test
 ```
 
 To run a specific test:
 
 ```bash
 npm run docker:test npm run test __tests__/folder_you_wanna_test/functional/...
-# or: yarn docker:test yarn test __tests__/folder_you_wanna_test/functional/...
 ```
 
 ## Docs
